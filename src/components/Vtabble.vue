@@ -1,7 +1,7 @@
 <template>
     <section class="tabble" v-model="selected">
        <mt-tabbar class="tabContent">
-           <router-link  class="tablink"  v-for=" (tab,key) in tablist" :to='tab.path' :id = 'tab.id'  >
+           <router-link  class="tablink"  v-for="(tab,key) in tablist"  :to='tab.path' :id = 'tab.id' :key=key >
                <mt-tab-item>
                    <span  :class="['iconfont',tab.iconClass,{'blue':selected == tab.id}]"></span>
                </mt-tab-item>
@@ -54,15 +54,22 @@ computed: {
           font-size: 14px;
           border-top: none;
           background-image: none;
+    .mint-tabbar{
+          justify-content: space-around;
+          .mint-tab-item{
+            padding: 8px 0 4px 0;
+          }
+          }
     
        .tablink{
         display:block;
         color: grey;
         text-decoration: none;
         outline: none;
-        // .iconfont{
-        //     color: grey
-        // }
+        .iconfont{
+            color: grey;
+        font-size: 20px;
+        }
             .blue{
                 color: #2195d4de;
             }
