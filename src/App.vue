@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <vheader/>
     <router-view/>
+    <tabble/>
   </div>
 </template>
 
 <script>
+import vheader from '@/components/Vheader'
+import tabble from '@/components/Vtabble'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components:{vheader,tabble},
 }
 </script>
 
@@ -18,6 +23,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
