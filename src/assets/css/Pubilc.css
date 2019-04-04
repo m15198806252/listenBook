@@ -1,4 +1,11 @@
-ul{
+
+body{
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+  ul{
     margin:0;
     padding: 0
   }
@@ -12,4 +19,12 @@ ul{
     outline: none;
     color: #8C8C8CFF;
      display: inline-block;
+  }
+  p{
+    text-align: left;
+    margin: 0;
+
+  }
+  .grey{
+    background: #eaeaea;
   }
