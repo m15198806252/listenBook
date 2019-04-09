@@ -53,7 +53,7 @@
           <mt-tab-container-item :id='1'>
             <p class="grey"></p>
             <div class="booklist" v-for="n in 3">
-                <img src="1.png">
+                <img src="@/assets/imgs/book/book1.png">
                 <div class="listdetial">
                     <p class="whrite">作者：</p>
                     <p class="story">简介：</p>
@@ -63,7 +63,7 @@
           <mt-tab-container-item :id="2">
             <p class="grey"><span class="border"></span>全部限免</p>
             <div class="booklist" v-for="n in 10" :key="n">
-                <img src="1.png">
+                <img src="@/assets/imgs/book/book1.png">
                 <div class="listdetial">
                     <p class="whrite">作者：</p>
                     <p class="story">简介：</p>
@@ -185,7 +185,9 @@
           text-align: left;
           display: flex;
      img{
-      padding: 20px 0
+      height: 77px;
+      width: 77px;
+      margin: 10px
      }
      div{
           padding: 10px 0;
