@@ -5,7 +5,7 @@
                <mt-tab-item>
                    <span  :class="['iconfont',tab.iconClass,{'blue':selected == tab.id}]"></span>
                </mt-tab-item>
-               <div>
+               <div :class = "{'blue':selected == tab.id}">
                    {{tab.title}}
                </div>
            </router-link>
