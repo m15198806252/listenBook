@@ -8,8 +8,8 @@
        </div>
        <!-- 顶部导航 -->
         <mt-navbar v-model="selected"  class="Topnav">
-          <mt-tab-item v-for="(type,i) in typeNav"  :id="type.id" :key="i" >
-             <span  @click="type(i)">{{type.name}}</span> 
+          <mt-tab-item v-for="(type,i) in typeNav"  :id="type.id" :key="i" :class="{'chioce':typeindex ==i}">
+             <span  @click="Type(i)">{{type.name}}</span> 
          </mt-tab-item>
          <img src="@/assets/imgs/next.png" class="more">
      </mt-navbar>
@@ -51,12 +51,19 @@
                             {name:'恐 怖',id:4},
                             {name:'历 史',id:5},
                     ],
+                    typeindex:0
                    
                     
             }
         },
         methods:{
-
+                selected(){
+                    
+                },
+                Type(i){
+                  this.typeindex = i
+                  console.log(this.typeindex,i)
+                }
         },
 
 
@@ -65,6 +72,9 @@
      }
 </script>
 <style lang="less">
+.chioce{
+      border-bottom: 3px solid orange;padding:0 10px
+}
 
 .typeHead{
     display: flex;
@@ -95,11 +105,15 @@
 }
 // 顶部导航条
 .Topnav{
-    padding: 0 10px;
+    // padding: 0 10px;
 }
 .mint-tab-item-label{
     font-size: 16px;
     color: gray;
+    text-align: center;
+    .is-selected{
+      border-bottom: none;
+    }
 }
 // 书本列表
 .typeContent{
